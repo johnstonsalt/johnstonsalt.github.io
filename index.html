@@ -25,15 +25,20 @@
                 // mc data
                 var mcres = await fetch(`https://api.minetools.eu/ping/${ip}/25565`);
                 var mcdata = await mcres.json();
-                console.log(mcdata["players"]["sample"]);
 
                 var countdiv = document.querySelector("#countdiv");
                 var listdiv = document.querySelector("#listdiv");
-                countdiv.innerText = `there are ${mcdata["players"]["sample"].length} players online:`;
 
-                for (var i = 0; i < mcdata["players"]["sample"].length; i++) {
-                    var player = mcdata["players"]["sample"][i]["name"];
-                    listdiv.innerText += `${player}\n`;
+
+                if (mcdata["error"]) {
+                    countdiv.innerHTML = "<b>server is either offline, or IP needs to update</b>.<br />call John if server is on, and IP doesn't update within 5 minutes!";
+                } else  {
+                    countdiv.innerText = `there are ${mcdata["players"]["sample"].length} players online:`;
+
+                    for (var i = 0; i < mcdata["players"]["sample"].length; i++) {
+                        var player = mcdata["players"]["sample"][i]["name"];
+                        listdiv.innerText += `${player}\n`;
+                    }
                 }
             }
     
