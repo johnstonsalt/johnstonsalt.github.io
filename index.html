@@ -1,6 +1,15 @@
 <!DOCTYPE html>
+    <head>
+        <title>BASMAAAATI BASMATI RICE</title>
+        
+        <style>
+            body, html { padding: 0; margin: 0; background: whitesmoke; color: #111111; font-family: sans-serif; }
+        </style>
+    </head>
+
     <body>
-        <div style="text-align: center; font-size: 1.2em;">
+        <br />
+        <div style="text-align: center; font-size: 2em;">
             <div>current IP is:</div>
             <div id="ipdiv" style="font-size: 2em; font-weight: bold;";></div>
             
@@ -9,8 +18,6 @@
             <div id="countdiv">loading...</div>
             <div id="listdiv" style="font-size: 2em; font-weight: bold;";></div>
         </div>
-
-        
 
         <script>
             async function doTheShit() {
@@ -29,10 +36,9 @@
                 var countdiv = document.querySelector("#countdiv");
                 var listdiv = document.querySelector("#listdiv");
 
-
                 if (mcdata["error"]) {
-                    countdiv.innerHTML = "<b>server is either offline, or IP needs to update</b>.<br />call John if server is on, and IP doesn't update within 5 minutes!";
-                } else  {
+                    countdiv.innerHTML = "<b style='color: #e03731;'>server is either offline, or IP needs to update</b><br />call John if server is on, and IP doesn't update within 5 minutes!";
+                } else {
                     countdiv.innerText = `there are ${mcdata["players"]["sample"].length} players online:`;
 
                     for (var i = 0; i < mcdata["players"]["sample"].length; i++) {
