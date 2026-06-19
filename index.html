@@ -3,7 +3,7 @@
         <title>BASMAAAATI BASMATI RICE</title>
         
         <style>
-            body, html { padding: 0; margin: 0; background: whitesmoke; color: #232323; font-family: sans-serif; }
+            body, html { padding: 0; margin: 0; background: whitesmoke; color: #404040; font-family: sans-serif; }
         </style>
     </head>
 
@@ -12,7 +12,7 @@
         <br />
         <div style="text-align: center; font-size: 2em;">
             <div>current IP is:</div>
-            <div id="ipdiv" style="font-size: 2.5em; font-weight: bold;"></div>
+            <div id="ipdiv" style="font-size: 2.7em; font-weight: bold;"></div>
             
             <br />
 
@@ -50,6 +50,7 @@
             }
     
             doTheShit();
+            setTimeout(doTheShit, 1000); // because doesn't update reliably probably because of fuckass caching
         </script>
     </body>
 </html>
