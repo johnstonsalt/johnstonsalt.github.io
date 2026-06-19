@@ -31,7 +31,7 @@
                 ipdiv.innerText = ip;
 
                 // mc data
-                var mcres = await fetch(`https://api.minetools.eu/ping/${ip}/25565`, { cache: "no-store" });
+                var mcres = await fetch(`https://api.minetools.eu/ping/${ip}/25565?bypasscache=${Math.round(Math.random() * 100)}`, { cache: "no-store" });
                 var mcdata = await mcres.json();
 
                 var countdiv = document.querySelector("#countdiv");
@@ -52,7 +52,7 @@
     
             doTheShit();
             setTimeout(doTheShit, 1000); // because doesn't update reliably probably because of fuckass caching
-            setTimeout(doTheShit, 2000); // because doesn't update reliably probably because of fuckass caching
+            setTimeout(doTheShit, 3000); // because doesn't update reliably probably because of fuckass caching
         </script>
     </body>
 </html>
