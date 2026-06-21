@@ -16,7 +16,10 @@
             
             <br />
 
-            <button id="btn" onclick="redir()" style="font-size: 1em; outline: 1px solid #ABABAB; border: none; padding: 0.3em 0.6em;">see active players</button>
+            <button id="btn" onclick="redir('')" style="font-size: 1em; outline: 1px solid #ABABAB; border: none; padding: 0.3em 0.6em;">see active players</button>
+            <br />
+            <br />
+            <button onclick="redir('stats')" style="font-size: 1em; outline: 1px solid #ABABAB; border: none; padding: 0.3em 0.6em;">see player stats</button>
         </div>
 
         <script>
@@ -38,8 +41,8 @@
                 btn.hidden = false; 
             }
 
-            function redir() {
-                window.location.href = `http://${ip}:3000`;
+            function redir(route) {
+                window.location.href = `http://${ip}:3000/${route}`;
             }
  
             doTheShit();
