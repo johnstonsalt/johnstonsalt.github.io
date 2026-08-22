@@ -37,7 +37,7 @@
                 var ipdiv = document.querySelector("#ipdiv");
                 ipdiv.innerText = ip;
 
-                // set hrefs
+                // set the hrefs
                 for (var i = 0; i < btns.length; i++) { 
                     var route = btns[i].getAttribute("data-route");
                     if (route) { btns[i].setAttribute("href", `http://${ip}:50000${route}`); }
