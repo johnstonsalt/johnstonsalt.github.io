@@ -30,7 +30,7 @@
 
             async function doTheShit() {
                 // ip
-                var ipres = await fetch("https://raw.githubusercontent.com/johnstonsalt/ip-updates/refs/heads/main/README.md", { cache: "no-store" } );
+                var ipres = await fetch("https://raw.githubusercontent.com/johnstonalt/ip-updates/refs/heads/main/README.md", { cache: "no-store" } );
                 ip = await ipres.text();
                 ip = ip.replace("# ", "");
                 console.log(ip);
